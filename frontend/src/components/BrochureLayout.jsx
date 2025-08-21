@@ -9,6 +9,83 @@ import { Download, Phone, Mail, MapPin, Brain, BarChart3, Bot, Workflow, Target,
 import html2pdf from 'html2pdf.js';
 
 const BrochureLayout = () => {
+  const [roiData, setRoiData] = useState({
+    monthlyRevenue: '',
+    employees: '',
+    manualTaskHours: '',
+    errorCostMonthly: ''
+  });
+  
+  const [roiResults, setRoiResults] = useState(null);
+  const [contactForm, setContactForm] = useState({
+    name: '',
+    email: '',
+    company: '',
+    industry: '',
+    challenge: '',
+    phone: ''
+  });
+
+  const calculateROI = () => {
+    const revenue = parseFloat(roiData.monthlyRevenue) || 0;
+    const employees = parseInt(roiData.employees) || 0;
+    const manualHours = parseFloat(roiData.manualTaskHours) || 0;
+    const errorCost = parseFloat(roiData.errorCostMonthly) || 0;
+
+    // ROI Calculations based on industry averages
+    const laborCostPerHour = 25; // Average cost per hour for manual tasks
+    const automationSavings = manualHours * laborCostPerHour * 0.8; // 80% task elimination
+    const errorReduction = errorCost * 0.6; // 60% error prevention
+    const efficiencyGain = revenue * 0.15; // 15% efficiency increase
+    
+    const monthlysavings = automationSavings + errorReduction + efficiencyGain;
+    const annualSavings = monthlysavings * 12;
+    const implementationCost = 50000; // Estimated implementation cost
+    const paybackMonths = implementationCost / monthlysavings;
+    const roi = ((annualSavings - implementationCost) / implementationCost) * 100;
+
+    setRoiResults({
+      monthlyAutomationSavings: automationSavings,
+      monthlyErrorReduction: errorReduction,
+      monthlyEfficiencyGain: efficiencyGain,
+      totalMonthlySavings: monthlysavings,
+      annualSavings: annualSavings,
+      paybackPeriod: paybackMonths,
+      roi: roi
+    });
+  };
+
+  const handleContactSubmit = (e) => {
+    e.preventDefault();
+    // Create mailto with structured business inquiry
+    const subject = `Strategic AI Transformation Consultation - ${contactForm.company}`;
+    const body = `Hi Neeraj,
+
+I'm interested in exploring how AI and data analytics can transform our business operations and provide competitive advantage.
+
+BUSINESS DETAILS:
+Company: ${contactForm.company}
+Industry: ${contactForm.industry}
+Contact Person: ${contactForm.name}
+Phone: ${contactForm.phone}
+Email: ${contactForm.email}
+
+CURRENT CHALLENGE:
+${contactForm.challenge}
+
+I'd like to schedule a strategic consultation to discuss:
+• Custom AI solutions for our specific use case
+• ROI projections and implementation roadmap  
+• Competitive advantage opportunities
+• Risk mitigation strategies
+
+Please let me know your availability for a strategic consultation.
+
+Best regards,
+${contactForm.name}`;
+
+    window.open(`mailto:pcneeraj123@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_self');
+  };
   const handleDownloadPDF = () => {
     const element = document.querySelector('.brochure-container');
     const opt = {
