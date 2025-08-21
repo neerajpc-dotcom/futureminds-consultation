@@ -363,21 +363,28 @@ const BrochureLayout = () => {
       <section className="pad-xl hero-section">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="heading-1 mb-4">Ready to Unlock Your Business Potential?</h2>
+            <h2 className="heading-1 mb-4">Your Next Move Determines Your Market Position</h2>
             <p className="body-large mb-8">
-              Your data is a goldmine. Let us help you excavate it.<br />
-              Contact us today for a free consultation. We will analyze your specific use case and outline a clear path to your solution.
+              <strong>Every day you delay transformation is a day your competitors gain ground.</strong><br />
+              Schedule a free, no-obligation strategic consultation where we'll analyze your specific business challenges and present a tailored roadmap for AI-driven growth.
             </p>
             
+            <div className="hero-announcement inline-flex mb-8">
+              Free Strategic Consultation • Custom Solution Roadmap • Zero Commitment Required
+            </div>
+            
             <Card className="voice-card p-8 max-w-lg mx-auto">
-              <h3 className="heading-2 mb-6">FutureMind's</h3>
-              <p className="body-small mb-6 text-text-muted">Owned & Operated by Neeraj P C</p>
+              <h3 className="heading-2 mb-2">Ready to Lead Your Industry?</h3>
+              <p className="body-small mb-6 text-text-muted">
+                Connect directly with <strong>Neeraj P C</strong><br />
+                Chief Technology Strategist • 5+ Years Transforming Bengaluru Businesses
+              </p>
               
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-accent-blue-400" />
                   <div>
-                    <p className="body-small font-medium">Call / WhatsApp</p>
+                    <p className="body-small font-medium">Direct Line / WhatsApp</p>
                     <p className="mono-text">+91 8088104708</p>
                   </div>
                 </div>
@@ -385,7 +392,7 @@ const BrochureLayout = () => {
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-accent-purple-400" />
                   <div>
-                    <p className="body-small font-medium">Email</p>
+                    <p className="body-small font-medium">Strategic Consultation</p>
                     <p className="mono-text">pcneeraj123@gmail.com</p>
                   </div>
                 </div>
@@ -393,7 +400,7 @@ const BrochureLayout = () => {
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-accent-orange-400" />
                   <div>
-                    <p className="body-small font-medium">Based in</p>
+                    <p className="body-small font-medium">Serving All Industries From</p>
                     <p className="mono-text">Bengaluru, Karnataka</p>
                   </div>
                 </div>
@@ -405,16 +412,20 @@ const BrochureLayout = () => {
                   onClick={() => window.open('tel:+918088104708', '_self')}
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                  Schedule Call Now
                 </Button>
                 <Button 
                   className="btn-secondary flex-1"
-                  onClick={() => window.open('mailto:pcneeraj123@gmail.com?subject=Business Consultation Inquiry', '_self')}
+                  onClick={() => window.open('mailto:pcneeraj123@gmail.com?subject=Strategic Business Transformation Consultation&body=Hi Neeraj,%0D%0A%0D%0AI\'m interested in exploring how AI and data analytics can transform my business operations and give us a competitive advantage.%0D%0A%0D%0AMy Industry: [Please specify]%0D%0ACompany: [Company name]%0D%0ACurrent Challenge: [Brief description]%0D%0A%0D%0APlease let me know your availability for a strategic consultation.%0D%0A%0D%0ABest regards', '_self')}
                 >
                   <Mail className="w-4 h-4 mr-2" />
-                  Send Email
+                  Get Custom Roadmap
                 </Button>
               </div>
+              
+              <p className="caption mt-4 text-center">
+                <strong>Response Guarantee:</strong> Every inquiry receives a strategic response within 24 hours
+              </p>
             </Card>
           </div>
         </div>
