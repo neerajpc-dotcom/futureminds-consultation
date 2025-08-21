@@ -348,6 +348,264 @@ ${contactForm.name}`;
 
       <Separator className="my-12" />
 
+      {/* ROI Calculator Section */}
+      <section className="pad-xl bg-section">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="heading-1 mb-4">Calculate Your AI Transformation ROI</h2>
+            <p className="body-large">See the exact financial impact AI automation could have on your business</p>
+          </div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Calculator Input */}
+              <Card className="voice-card p-6">
+                <h3 className="heading-2 mb-6 flex items-center gap-2">
+                  <Calculator className="w-6 h-6 text-accent-blue-400" />
+                  Your Business Metrics
+                </h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <label className="body-small font-medium mb-2 block">Monthly Revenue ($)</label>
+                    <Input
+                      type="number"
+                      placeholder="e.g., 500000"
+                      value={roiData.monthlyRevenue}
+                      onChange={(e) => setRoiData({...roiData, monthlyRevenue: e.target.value})}
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="body-small font-medium mb-2 block">Number of Employees</label>
+                    <Input
+                      type="number"
+                      placeholder="e.g., 50"
+                      value={roiData.employees}
+                      onChange={(e) => setRoiData({...roiData, employees: e.target.value})}
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="body-small font-medium mb-2 block">Hours/Week on Manual Tasks</label>
+                    <Input
+                      type="number"
+                      placeholder="e.g., 200"
+                      value={roiData.manualTaskHours}
+                      onChange={(e) => setRoiData({...roiData, manualTaskHours: e.target.value})}
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="body-small font-medium mb-2 block">Monthly Cost of Errors ($)</label>
+                    <Input
+                      type="number"
+                      placeholder="e.g., 10000"
+                      value={roiData.errorCostMonthly}
+                      onChange={(e) => setRoiData({...roiData, errorCostMonthly: e.target.value})}
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <Button 
+                    onClick={calculateROI}
+                    className="btn-primary w-full mt-6"
+                  >
+                    <TrendingUp className="w-4 h-4 mr-2" />
+                    Calculate My ROI
+                  </Button>
+                </div>
+              </Card>
+              
+              {/* ROI Results */}
+              <Card className="voice-card p-6">
+                <h3 className="heading-2 mb-6 flex items-center gap-2">
+                  <DollarSign className="w-6 h-6 text-accent-green-400" />
+                  Your Transformation Impact
+                </h3>
+                
+                {roiResults ? (
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center p-3 bg-accent-blue-200 rounded-lg">
+                        <div className="heading-2 text-accent-blue-400">
+                          ${Math.round(roiResults.monthlyAutomationSavings).toLocaleString()}
+                        </div>
+                        <div className="caption">Monthly Automation Savings</div>
+                      </div>
+                      
+                      <div className="text-center p-3 bg-accent-purple-200 rounded-lg">
+                        <div className="heading-2 text-accent-purple-400">
+                          ${Math.round(roiResults.monthlyErrorReduction).toLocaleString()}
+                        </div>
+                        <div className="caption">Error Cost Reduction</div>
+                      </div>
+                      
+                      <div className="text-center p-3 bg-accent-orange-200 rounded-lg">
+                        <div className="heading-2 text-accent-orange-400">
+                          ${Math.round(roiResults.annualSavings).toLocaleString()}
+                        </div>
+                        <div className="caption">Annual Savings</div>
+                      </div>
+                      
+                      <div className="text-center p-3 bg-accent-green-200 rounded-lg">
+                        <div className="heading-2 text-text-primary">
+                          {Math.round(roiResults.roi)}%
+                        </div>
+                        <div className="caption">First Year ROI</div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 p-4 bg-gradient-to-r from-accent-blue-200 to-accent-purple-200 rounded-lg">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Clock className="w-5 h-5 text-accent-blue-400" />
+                        <span className="body-small font-medium">Payback Period</span>
+                      </div>
+                      <div className="heading-3">
+                        {Math.round(roiResults.paybackPeriod)} months
+                      </div>
+                    </div>
+                    
+                    <div className="hero-announcement inline-flex w-full justify-center mt-4">
+                      Based on Industry Averages & Conservative Estimates
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-center py-12">
+                    <TrendingUp className="w-16 h-16 text-accent-blue-400 mx-auto mb-4 opacity-50" />
+                    <p className="body-medium text-text-secondary">
+                      Enter your business metrics to see your personalized ROI projection
+                    </p>
+                  </div>
+                )}
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Separator className="my-12" />
+
+      {/* Enhanced Contact Form */}
+      <section className="pad-xl">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="heading-1 mb-4">Get Your Custom Transformation Roadmap</h2>
+            <p className="body-large">Schedule a strategic consultation tailored to your industry and business challenges</p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <Card className="voice-card p-8">
+              <form onSubmit={handleContactSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="body-small font-medium mb-2 block">Full Name *</label>
+                    <Input
+                      type="text"
+                      required
+                      placeholder="Your full name"
+                      value={contactForm.name}
+                      onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="body-small font-medium mb-2 block">Business Email *</label>
+                    <Input
+                      type="email"
+                      required
+                      placeholder="your.email@company.com"
+                      value={contactForm.email}
+                      onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="body-small font-medium mb-2 block">Company Name *</label>
+                    <Input
+                      type="text"
+                      required
+                      placeholder="Your company name"
+                      value={contactForm.company}
+                      onChange={(e) => setContactForm({...contactForm, company: e.target.value})}
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="body-small font-medium mb-2 block">Phone Number</label>
+                    <Input
+                      type="tel"
+                      placeholder="+1 (555) 123-4567"
+                      value={contactForm.phone}
+                      onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="body-small font-medium mb-2 block">Industry *</label>
+                  <Select onValueChange={(value) => setContactForm({...contactForm, industry: value})}>
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Select your industry" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="real-estate">Real Estate & Property Development</SelectItem>
+                      <SelectItem value="supply-chain">Supply Chain & Logistics</SelectItem>
+                      <SelectItem value="manufacturing">Manufacturing & Warehouse</SelectItem>
+                      <SelectItem value="sales">Sales & Lead Generation</SelectItem>
+                      <SelectItem value="franchise">Franchise & Multi-Location</SelectItem>
+                      <SelectItem value="finance">Financial Services</SelectItem>
+                      <SelectItem value="healthcare">Healthcare</SelectItem>
+                      <SelectItem value="retail">Retail & E-commerce</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <div>
+                  <label className="body-small font-medium mb-2 block">Current Business Challenge *</label>
+                  <Textarea
+                    required
+                    placeholder="Describe your main business challenge or what you'd like to improve with AI/automation..."
+                    value={contactForm.challenge}
+                    onChange={(e) => setContactForm({...contactForm, challenge: e.target.value})}
+                    className="w-full min-h-[100px]"
+                  />
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button type="submit" className="btn-primary flex-1">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Get My Custom Roadmap
+                  </Button>
+                  <Button 
+                    type="button"
+                    className="btn-secondary flex-1"
+                    onClick={() => window.open('tel:+918088104708', '_self')}
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call for Immediate Consultation
+                  </Button>
+                </div>
+                
+                <p className="caption text-center">
+                  <strong>Response Guarantee:</strong> Every strategic inquiry receives a detailed response within 24 hours with custom recommendations
+                </p>
+              </form>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <Separator className="my-12" />
+
       {/* Services Section */}
       <section className="pad-xl" id="services">
         <div className="container">
