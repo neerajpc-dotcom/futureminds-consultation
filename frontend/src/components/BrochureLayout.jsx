@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
 import { Separator } from './ui/separator';
-import { Download, Phone, Mail, MapPin, Brain, BarChart3, Bot, Workflow, Target } from 'lucide-react';
+import { Input } from './ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+import { Textarea } from './ui/textarea';
+import { Download, Phone, Mail, MapPin, Brain, BarChart3, Bot, Workflow, Target, Calculator, TrendingUp, DollarSign, Clock, Users } from 'lucide-react';
 import html2pdf from 'html2pdf.js';
 
 const BrochureLayout = () => {
