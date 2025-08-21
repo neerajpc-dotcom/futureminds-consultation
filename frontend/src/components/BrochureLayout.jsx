@@ -88,10 +88,22 @@ const BrochureLayout = () => {
   ];
 
   const promises = [
-    "Competitive & High-Quality Output: Enterprise-grade solutions at a fraction of the cost.",
-    "Unlimited Client Support: We are your partners. Your success is our success.", 
-    "End-to-End Ownership: We handle everything from data ingestion to model deployment and training.",
-    "Clarity & Communication: No jargon. Just clear explanations and measurable results."
+    {
+      title: "Enterprise-Grade Solutions at Startup Speed",
+      description: "You get Fortune 500-level AI systems without the Fortune 500 price tag or timeline. Quality that scales, delivered at the pace your business demands."
+    },
+    {
+      title: "Unlimited Strategic Support", 
+      description: "Your success becomes our obsession. Unlimited consultations, continuous optimizations, and strategic guidance—because your growth drives our reputation."
+    },
+    {
+      title: "Complete Ownership & Accountability",
+      description: "From initial strategy through final deployment and beyond, we own every aspect of your transformation. No finger-pointing, no gaps in service—just results."
+    },
+    {
+      title: "Crystal-Clear Communication",
+      description: "No technical jargon, no confusing reports. Every recommendation comes with clear business impact, measurable ROI, and actionable next steps."
+    }
   ];
 
   return (
