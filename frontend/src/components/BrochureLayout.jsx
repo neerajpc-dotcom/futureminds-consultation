@@ -294,12 +294,11 @@ const BrochureLayout = () => {
       <footer className="pad-lg bg-text-primary text-white no-print">
         <div className="container">
           <div className="text-center">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-text-primary rounded-full flex items-center justify-center">
-                <Brain className="w-4 h-4 text-white" />
-              </div>
-              <span className="heading-3 font-semibold text-white">FutureMind's</span>
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_smart-data-agents/artifacts/v5g5guav_WhatsApp%20Image%202025-08-21%20at%208.17.38%20PM.jpeg" 
+              alt="FutureMind's Logo" 
+              className="h-8 w-auto mx-auto mb-4 brightness-0 invert"
+            />
             <p className="body-small">© 2024 FutureMind's. All rights reserved.</p>
             <p className="caption mt-2">Transforming Business Through Intelligent Data Solutions</p>
           </div>
