@@ -61,24 +61,29 @@ const BrochureLayout = () => {
 
   const industries = [
     {
-      title: "Real Estate",
-      solutions: "Predictive pricing models, lead scoring, market trend analysis, investment opportunity identification."
+      title: "Real Estate & Property Development",
+      solutions: "AI-powered pricing optimization, predictive market analysis, and automated lead qualification systems that maximize property ROI and accelerate sales cycles.",
+      impact: "35% faster sales closure"
     },
     {
-      title: "Supply Chain & Inventory Management", 
-      solutions: "Demand forecasting, optimize stock levels, reduce carrying costs, predict delays."
+      title: "Supply Chain & Logistics", 
+      solutions: "Intelligent demand forecasting, automated inventory optimization, and predictive maintenance systems that eliminate stockouts and reduce carrying costs.",
+      impact: "45% inventory cost reduction"
     },
     {
-      title: "Warehouse Optimization",
-      solutions: "Route planning for picking, space utilization analysis, predictive maintenance for equipment."
+      title: "Manufacturing & Warehouse Operations",
+      solutions: "Smart routing algorithms, predictive equipment maintenance, and automated quality control systems that maximize throughput and minimize downtime.",
+      impact: "50% operational efficiency gain"
     },
     {
-      title: "Lead Generation Across Domains",
-      solutions: "AI-powered lead scoring, identifying high-value prospects, automating outreach segmentation."
+      title: "Sales & Lead Generation",
+      solutions: "AI-driven prospect scoring, automated qualification workflows, and predictive customer journey mapping that converts more leads into revenue.",
+      impact: "60% lead conversion improvement"
     },
     {
-      title: "Franchise Model Building",
-      solutions: "Standardizing operations analytics, performance dashboards for franchisees, centralized KPI tracking."
+      title: "Franchise & Multi-Location Business",
+      solutions: "Centralized performance analytics, standardized operations dashboards, and predictive franchise success modeling for scalable growth.",
+      impact: "40% operational consistency increase"
     }
   ];
 
