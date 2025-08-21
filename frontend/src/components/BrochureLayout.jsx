@@ -90,12 +90,11 @@ const BrochureLayout = () => {
       <header className="header-nav no-print">
         <div className="container">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-text-primary rounded-full flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <span className="heading-2 font-semibold">FutureMind's</span>
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_smart-data-agents/artifacts/v5g5guav_WhatsApp%20Image%202025-08-21%20at%208.17.38%20PM.jpeg" 
+              alt="FutureMind's Logo" 
+              className="logo h-12 w-auto"
+            />
             <div className="nav-actions">
               <Button 
                 onClick={handleDownloadPDF}
