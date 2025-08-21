@@ -142,7 +142,7 @@ const BrochureLayout = () => {
       <Separator className="my-12" />
 
       {/* Services Section */}
-      <section className="pad-xl">
+      <section className="pad-xl" id="services">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="heading-1 mb-4">Our Core Expertise Services</h2>
