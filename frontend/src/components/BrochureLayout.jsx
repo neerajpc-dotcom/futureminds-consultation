@@ -29,28 +29,33 @@ const BrochureLayout = () => {
   const services = [
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Data Analytics & Visualization",
-      description: "Uncover hidden patterns, trends, and insights trapped in your data."
+      title: "Competitive Intelligence Through Data",
+      description: "Transform raw business data into strategic advantages that put you ahead of competition.",
+      impact: "30-50% cost reduction"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Predictive Modeling & Data Science", 
-      description: "Forecast demand, identify risks, and make proactive decisions."
+      title: "Predictive Business Intelligence", 
+      description: "Forecast market changes, customer behavior, and operational needs before they impact your bottom line.",
+      impact: "40% faster decision making"
     },
     {
       icon: <Bot className="w-6 h-6" />,
-      title: "Generative AI Solutions",
-      description: "Build custom chatbots, automate content creation, and enhance customer interactions."
+      title: "Revenue-Generating AI Systems",
+      description: "Custom AI solutions that don't just cut costs—they create new profit streams and enhance customer value.",
+      impact: "25% revenue increase potential"
     },
     {
       icon: <Workflow className="w-6 h-6" />,
-      title: "Agentic AI Workflow Automation",
-      description: "Create intelligent agents that automate complex, multi-step tasks and processes from end-to-end."
+      title: "Intelligent Process Automation",
+      description: "End-to-end workflow automation that eliminates manual errors and scales your best business decisions.",
+      impact: "80% manual task elimination"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "End-to-End Business Use Case Solving",
-      description: "From problem definition to deployment and support."
+      title: "Strategic Risk Mitigation",
+      description: "AI-powered risk monitoring and predictive alerts that prevent costly business blind spots.",
+      impact: "60% risk prevention rate"
     }
   ];
 
