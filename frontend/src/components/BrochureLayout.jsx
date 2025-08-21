@@ -106,10 +106,16 @@ const BrochureLayout = () => {
             Solving Complex Business Problems with Advanced Analytics, Generative AI & Agentic Systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Button className="btn-primary">
+            <Button 
+              className="btn-primary"
+              onClick={() => window.open('tel:+918088104708', '_self')}
+            >
               Get Free Consultation
             </Button>
-            <Button className="btn-secondary">
+            <Button 
+              className="btn-secondary"
+              onClick={() => document.querySelector('#services').scrollIntoView({ behavior: 'smooth' })}
+            >
               View Our Services
             </Button>
           </div>
