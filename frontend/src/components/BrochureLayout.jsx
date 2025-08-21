@@ -123,10 +123,11 @@ const BrochureLayout = () => {
             Data & AI-Driven Consultancy
           </div>
           <h1 className="heading-hero">
-            Turn Your Business Data Into Your Greatest Competitive Advantage
+            Every Industry Leader Faces the Same Critical Choice: Transform or Fall Behind
           </h1>
           <p className="hero-subtitle body-large">
-            Solving Complex Business Problems with Advanced Analytics, Generative AI & Agentic Systems.
+            Your competitors are already leveraging AI and data analytics to cut costs, reduce errors, and unlock new revenue streams. 
+            The question isn't whether you'll modernize—it's whether you'll lead the transformation or scramble to catch up.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button 
