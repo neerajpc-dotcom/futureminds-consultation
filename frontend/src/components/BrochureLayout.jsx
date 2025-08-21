@@ -250,8 +250,8 @@ const BrochureLayout = () => {
       <section className="pad-xl" id="services">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="heading-1 mb-4">Our Core Expertise Services</h2>
-            <p className="body-large">We tailor our cutting-edge expertise to solve your specific challenges:</p>
+            <h2 className="heading-1 mb-4">Four Pillars of Business Transformation</h2>
+            <p className="body-large">Every successful transformation rests on these strategic foundations:</p>
           </div>
           <div className="voice-grid">
             {services.map((service, index) => (
@@ -262,7 +262,10 @@ const BrochureLayout = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="heading-3 mb-2">{service.title}</h3>
-                    <p className="body-small text-text-secondary">{service.description}</p>
+                    <p className="body-small text-text-secondary mb-3">{service.description}</p>
+                    <div className="text-xs font-medium text-accent-blue-400 uppercase tracking-wide">
+                      ROI Impact: {service.impact}
+                    </div>
                   </div>
                 </div>
               </Card>
