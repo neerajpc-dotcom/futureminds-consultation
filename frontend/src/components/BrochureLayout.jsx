@@ -3,6 +3,7 @@ import { Button } from './ui/button';
 import { Card } from './ui/card';
 import { Separator } from './ui/separator';
 import { Download, Phone, Mail, MapPin, Brain, BarChart3, Bot, Workflow, Target } from 'lucide-react';
+import html2pdf from 'html2pdf.js';
 
 const BrochureLayout = () => {
   const handleDownloadPDF = () => {
