@@ -313,16 +313,35 @@ const BrochureLayout = () => {
       <section className="pad-xl bg-section">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="heading-1 mb-4">The FutureMind's Promise</h2>
+            <h2 className="heading-1 mb-4">Your Success Is Our Sole Performance Metric</h2>
+            <p className="body-large mb-8">
+              This isn't a vendor relationship—it's a strategic partnership where your competitive advantage becomes our shared mission.
+            </p>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="grid gap-6 md:grid-cols-2">
               {promises.map((promise, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-accent-orange-400 mt-3 flex-shrink-0"></div>
-                  <p className="body-medium">{promise}</p>
-                </div>
+                <Card key={index} className="voice-card p-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-3 h-3 rounded-full bg-accent-orange-400 mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="heading-3 mb-2 text-accent-orange-400">{promise.title}</h3>
+                      <p className="body-medium">{promise.description}</p>
+                    </div>
+                  </div>
+                </Card>
               ))}
+            </div>
+            
+            <div className="mt-12 text-center">
+              <div className="hero-announcement inline-flex mb-6">
+                Strategic Partnership Guarantee
+              </div>
+              <p className="body-large max-w-3xl mx-auto">
+                <strong>When you partner with FutureMind's, you're not hiring a consultant—you're acquiring a strategic technology officer</strong> 
+                dedicated to your market dominance. Every system we build, every insight we deliver, every automation we deploy serves one purpose: 
+                making your business more profitable, more efficient, and more competitive than it was yesterday.
+              </p>
             </div>
           </div>
         </div>
