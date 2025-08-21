@@ -441,6 +441,11 @@ body {
   .logo {
     height: 2.5rem;
   }
+
+  /* Make hero logo smaller on mobile */
+  .hero-section .w-64 {
+    width: 12rem !important;
+  }
 }
 
 /* Print Styles */
