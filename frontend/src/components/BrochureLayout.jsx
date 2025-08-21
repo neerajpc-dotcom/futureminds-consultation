@@ -111,6 +111,13 @@ const BrochureLayout = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
+          <div className="mb-8">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_smart-data-agents/artifacts/v5g5guav_WhatsApp%20Image%202025-08-21%20at%208.17.38%20PM.jpeg" 
+              alt="FutureMind's Logo" 
+              className="w-64 h-auto mx-auto mb-6"
+            />
+          </div>
           <div className="hero-announcement">
             <Brain className="w-4 h-4" />
             Data & AI-Driven Consultancy
