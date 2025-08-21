@@ -241,11 +241,17 @@ const BrochureLayout = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                <Button className="btn-primary flex-1">
+                <Button 
+                  className="btn-primary flex-1"
+                  onClick={() => window.open('tel:+918088104708', '_self')}
+                >
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
                 </Button>
-                <Button className="btn-secondary flex-1">
+                <Button 
+                  className="btn-secondary flex-1"
+                  onClick={() => window.open('mailto:pcneeraj123@gmail.com?subject=Business Consultation Inquiry', '_self')}
+                >
                   <Mail className="w-4 h-4 mr-2" />
                   Send Email
                 </Button>
