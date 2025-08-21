@@ -285,13 +285,17 @@ const BrochureLayout = () => {
       <section className="pad-xl">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="heading-1 mb-4">We Solve Problems For Your Industry</h2>
+            <h2 className="heading-1 mb-4">Proven Transformation Across High-Stakes Industries</h2>
+            <p className="body-large">Our strategic approach has delivered measurable results across sectors where precision and profitability matter most:</p>
           </div>
           <div className="ai-grid">
             {industries.map((industry, index) => (
               <Card key={index} className="voice-card hover-lift p-6">
                 <h3 className="heading-3 mb-3 text-accent-purple-400">{industry.title}</h3>
-                <p className="body-small">{industry.solutions}</p>
+                <p className="body-small mb-4">{industry.solutions}</p>
+                <div className="text-xs font-medium text-accent-purple-400 uppercase tracking-wide">
+                  Business Impact: {industry.impact}
+                </div>
               </Card>
             ))}
           </div>
