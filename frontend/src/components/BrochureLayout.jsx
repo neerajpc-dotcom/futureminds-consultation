@@ -156,13 +156,13 @@ const BrochureLayout = () => {
               className="btn-primary"
               onClick={() => window.open('tel:+918088104708', '_self')}
             >
-              Get Free Consultation
+              Schedule Strategic Consultation
             </Button>
             <Button 
               className="btn-secondary"
               onClick={() => document.querySelector('#services').scrollIntoView({ behavior: 'smooth' })}
             >
-              View Our Services
+              See Transformation Pillars
             </Button>
           </div>
         </div>
