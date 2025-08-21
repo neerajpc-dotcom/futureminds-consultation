@@ -146,18 +146,99 @@ const BrochureLayout = () => {
         </div>
       </section>
 
+      {/* Strategic Partnership Section */}
+      <section className="pad-xl bg-section">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="heading-1 mb-6">This Isn't About Technology—It's About Your Future Market Position</h2>
+            <p className="body-large mb-8">
+              As a seasoned CTO with 5+ years architecting business transformations across Bengaluru's most competitive markets, 
+              I've witnessed countless companies struggle with the same fundamental challenge: <strong>their data is their goldmine, but they're mining it with outdated tools.</strong>
+            </p>
+            <div className="hero-announcement inline-flex mb-8">
+              We don't just implement solutions—we engineer your competitive advantage.
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+              <Card className="voice-card p-6 text-left">
+                <h3 className="heading-3 mb-4 text-accent-orange-400">The Reality Check</h3>
+                <ul className="space-y-3 body-medium">
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 rounded-full bg-accent-orange-400 mt-2 flex-shrink-0"></div>
+                    <span>Your competitors are reducing operational costs by 30-50% through AI automation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 rounded-full bg-accent-orange-400 mt-2 flex-shrink-0"></div>
+                    <span>Manual processes are costing you thousands in preventable errors monthly</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 rounded-full bg-accent-orange-400 mt-2 flex-shrink-0"></div>
+                    <span>Revenue opportunities are slipping through cracks in your data analysis</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 rounded-full bg-accent-orange-400 mt-2 flex-shrink-0"></div>
+                    <span>Business risks remain invisible without predictive intelligence</span>
+                  </li>
+                </ul>
+              </Card>
+              
+              <Card className="voice-card p-6 text-left">
+                <h3 className="heading-3 mb-4 text-accent-blue-400">Your Strategic Advantage</h3>
+                <ul className="space-y-3 body-medium">
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 rounded-full bg-accent-blue-400 mt-2 flex-shrink-0"></div>
+                    <span>Custom AI systems that eliminate 80%+ of manual operational tasks</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 rounded-full bg-accent-blue-400 mt-2 flex-shrink-0"></div>
+                    <span>Predictive analytics that identify profit opportunities before competitors</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 rounded-full bg-accent-blue-400 mt-2 flex-shrink-0"></div>
+                    <span>Intelligent automation that scales your best decisions across operations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 rounded-full bg-accent-blue-400 mt-2 flex-shrink-0"></div>
+                    <span>Real-time risk monitoring that prevents costly business blindspots</span>
+                  </li>
+                </ul>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Welcome Section */}
       <section className="pad-xl">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="heading-1 mb-6">Welcome to FutureMind's</h2>
+            <h2 className="heading-1 mb-6">Why Generic Solutions Fail—And Our Tailored Approach Succeeds</h2>
             <p className="body-large mb-8">
-              Led by <strong>Neeraj P C</strong>, a seasoned expert with over 5 years of experience in Bengaluru's tech heartland, 
-              FutureMind's is your partner for navigating the future of business. We specialize in transforming raw data into 
-              intelligent, automated, and revenue-generating systems.
+              Every business leader I've partnered with initially thought their challenges were unique. The truth? 
+              <strong>Your challenges ARE unique—but the underlying patterns are predictable.</strong> That's where our strategic advantage lies.
             </p>
-            <div className="hero-announcement inline-flex">
-              We don't just provide reports; we provide solutions.
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-accent-purple-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-accent-purple-400" />
+                </div>
+                <h3 className="heading-3 mb-2">Deep Use Case Analysis</h3>
+                <p className="body-small">We dissect your specific business model, not apply generic templates</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-accent-blue-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-accent-blue-400" />
+                </div>
+                <h3 className="heading-3 mb-2">Custom AI Architecture</h3>
+                <p className="body-small">Purpose-built systems that integrate seamlessly with your operations</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-accent-orange-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Workflow className="w-8 h-8 text-accent-orange-400" />
+                </div>
+                <h3 className="heading-3 mb-2">End-to-End Ownership</h3>
+                <p className="body-small">From strategy to deployment to continuous optimization</p>
+              </div>
             </div>
           </div>
         </div>
