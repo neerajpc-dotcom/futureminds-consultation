@@ -7,7 +7,23 @@ import html2pdf from 'html2pdf.js';
 
 const BrochureLayout = () => {
   const handleDownloadPDF = () => {
-    window.print();
+    const element = document.querySelector('.brochure-container');
+    const opt = {
+      margin: 0.5,
+      filename: 'FutureMinds-Brochure.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    
+    // Hide elements that shouldn't appear in PDF
+    const printElements = document.querySelectorAll('.no-print');
+    printElements.forEach(el => el.style.display = 'none');
+    
+    html2pdf().set(opt).from(element).save().then(() => {
+      // Restore hidden elements
+      printElements.forEach(el => el.style.display = '');
+    });
   };
 
   const services = [
